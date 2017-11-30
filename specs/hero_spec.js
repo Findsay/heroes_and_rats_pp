@@ -52,9 +52,26 @@ describe("Hero", function(){
     assert.deepStrictEqual(hero.sortTasks("urgency"), urgentTasks);
     var difficultTasks = [task2, task3, task4, task];
     assert.deepStrictEqual(hero.sortTasks("difficulty"), difficultTasks);
-
-
-
+  });
+  it("should be able to view tasks by complete", function(){
+    task.complete();
+    task2.complete();
+    hero.addTask(task);
+    hero.addTask(task2);
+    hero.addTask(task3);
+    hero.addTask(task4);
+    var completed = [task, task2];
+    assert.deepStrictEqual(hero.completedTasks(), completed);
+  });
+  it("should be able to view incompleted tasks", function(){
+    task.complete();
+    task2.complete();
+    hero.addTask(task);
+    hero.addTask(task2);
+    hero.addTask(task3);
+    hero.addTask(task4);
+    var incomplete = [task3, task4];
+    assert.deepStrictEqual(hero.incompleteTasks(), incomplete);
   })
 
 })

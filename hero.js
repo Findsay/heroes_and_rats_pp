@@ -25,6 +25,12 @@ Hero.prototype = {
   sortTasks: function(type){
     var result = _.sortBy(this.tasks, type);
     return result.reverse();
+  },
+  completedTasks: function(){
+    return _.filter(this.tasks, "completed")
+  },
+  incompleteTasks: function(){
+    return _.filter(this.tasks, ["completed", false])
   }
 }
 
