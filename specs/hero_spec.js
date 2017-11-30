@@ -8,12 +8,24 @@ describe("Hero", function(){
   beforeEach(function(){
     hero = new Hero("Link", 100, "Chuchus");
   });
-
-  it("should have a name");
-  it("should have health");
-  it("should have a fave food");
-  it("should talk and say their name");
-  it("should have a collection of tasks, which starts empty");
-  it("should be able to add a task to their collection");
+  it("should have a name", function(){
+    assert.strictEqual(hero.name, "Link");
+  });
+  it("should have health", function(){
+    assert.strictEqual(hero.health, 100);
+  });
+  it("should have a fave food", function(){
+    assert.strictEqual(hero.faveFood, "Chuchus");
+  });
+  it("should talk and say their name", function(){
+    assert.strictEqual(hero.talk(), "Hi, my name is Link")
+  });
+  it("should have a collection of tasks, which starts empty", function(){
+    assert.strictEqual(hero.tasks.length, 0);
+  });
+  xit("should be able to add a task to their collection", function(){
+    hero.add(task);
+    assert.strictEqual(hero.tasks.length, 1);
+  });
 
 })
