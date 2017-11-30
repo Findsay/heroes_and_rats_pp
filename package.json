@@ -1,7 +1,6 @@
 {
   "name": "heroes_and_rats",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "mocha specs"
@@ -10,5 +9,14 @@
   "license": "ISC",
   "devDependencies": {
     "mocha": "^4.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Findsay/heroes_and_rats_pp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Findsay/heroes_and_rats_pp/issues"
+  },
+  "homepage": "https://github.com/Findsay/heroes_and_rats_pp#readme",
+  "description": ""
 }
