@@ -8,6 +8,9 @@ var Hero = function(name, health, faveFood){
 Hero.prototype = {
   talk: function(){
     return "Hi, my name is " + this.name;
+  },
+  addTask: function(task){
+    this.tasks.push(task);
   }
 }
 
