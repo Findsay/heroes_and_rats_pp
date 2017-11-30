@@ -1,3 +1,5 @@
+var _ = require("lodash");
+
 var Hero = function(name, health, faveFood){
   this.name = name;
   this.health = health;
@@ -19,6 +21,10 @@ Hero.prototype = {
       this.health += food.replenishmentValue;
     }
 
+  },
+  sortTasks: function(type){
+    var result = _.sortBy(this.tasks, type);
+    return result.reverse();
   }
 }
 

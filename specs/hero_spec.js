@@ -9,9 +9,12 @@ describe("Hero", function(){
 
   beforeEach(function(){
     hero = new Hero("Link", 100, "Chuchus");
-    task = new Task("Kill Rats", 2, "Low", 50);
+    task = new Task("Kill Rats", 2, 1, 50);
     food = new Food("chicken", 10);
     faveFood = new Food("Chuchus", 20);
+    task2 = new Task("Defeat Ganon", 5, 3, 50);
+    task3 = new Task("Rescue Zelda", 4, 4, 50);
+    task4 = new Task("Collect Orbs", 3, 2, 50);
   });
   it("should have a name", function(){
     assert.strictEqual(hero.name, "Link");
@@ -39,6 +42,19 @@ describe("Hero", function(){
   it("if eat fave food, their health shuld increase by 1.5 food rv", function(){
     hero.eat(faveFood);
     assert.strictEqual(hero.health, 130);
+  });
+  it("should be able to sort tasks by difficulty, urgency or reward.", function(){
+    hero.addTask(task);
+    hero.addTask(task2);
+    hero.addTask(task3);
+    hero.addTask(task4);
+    var urgentTasks = [task3, task2, task4, task];
+    assert.deepStrictEqual(hero.sortTasks("urgency"), urgentTasks);
+    var difficultTasks = [task2, task3, task4, task];
+    assert.deepStrictEqual(hero.sortTasks("difficulty"), difficultTasks);
+
+
+
   })
 
 })
