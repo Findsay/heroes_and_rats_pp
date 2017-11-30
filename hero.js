@@ -11,6 +11,14 @@ Hero.prototype = {
   },
   addTask: function(task){
     this.tasks.push(task);
+  },
+  eat: function(food){
+    if (food.name === this.faveFood){
+      this.health += food.replenishmentValue * 1.5;
+    }else{
+      this.health += food.replenishmentValue;
+    }
+
   }
 }
 
