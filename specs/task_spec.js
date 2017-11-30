@@ -6,7 +6,7 @@ describe("Task", function(){
 	var task;
 
   beforeEach(function(){
-    task = new Task("Kill Rats", 2, "Low", 50)
+    task = new Task("Kill Rats", 2, 1, 50)
   });
 
   it("should have a description", function(){
@@ -18,7 +18,7 @@ describe("Task", function(){
   });
 
   it("should have an urgency", function(){
-    assert.strictEqual(task.urgency, "Low")
+    assert.strictEqual(task.urgency, 1)
   });
 
   it("should have a reward", function(){

@@ -18,5 +18,8 @@
     "url": "https://github.com/Findsay/heroes_and_rats_pp/issues"
   },
   "homepage": "https://github.com/Findsay/heroes_and_rats_pp#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }
